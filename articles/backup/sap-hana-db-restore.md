@@ -184,7 +184,7 @@ To restore the backup data as files instead of a database, choose **Restore as F
         If you're creating a new restored database, run the HDBSQL command to create a new database `<DatabaseName>` and then stop the database for restore. However, if you're only restoring an existing database, run the HDBSQL command to stop the database:
 
         ```hdbsql
-        RECOVER DATA FOR <DatabaseName> USING BACKUP_ID <BackupIdFromJsonFile> USING SOURCE '<DatabaseName@HostName>'  USING CATALOG PATH ('<PathToGeneratedCatalogInStep3>') USING DATA PATH ('<DataFileDir>')  CLEAR LOG
+        RECOVER DATA FOR <DatabaseName> USING SOURCE '<DatabaseName@HostName>' USING BACKUP_ID <BackupIdFromJsonFile> USING CATALOG PATH ('<PathToGeneratedCatalogInStep3>') USING DATA PATH ('<DataFileDir>')  CLEAR LOG
         ```
 
         * `<DatabaseName>` - the name of the new database or existing database that you want to restore
